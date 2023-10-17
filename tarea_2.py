@@ -26,30 +26,19 @@ def sharpen_img(imagen, kernel):
 kernel = np.array([[-1, -1, -1],
                 [-1, 9.5, -1],
                 [-1, -1, -1]])
-depth = -1
-# get camera handle 
 device_id = 0
 cap = cv.VideoCapture(device_id)
-# a7 = sharpen_img(new_im, kernel)
-# cv.imshow("img", a7)
-# verify that video handle is open
 if (cap.isOpened() == False):
     print("Video capture failed to open")
-# get frame, apply processing and show result
 depth = -1
 while True:
     ret, im_rgb = cap.read()
-    im = im_rgb[:,:,:]
     if ret:
-        
-        new_im = np.pad(im, ((1,1), (1,1), (0, 0)), 'constant', constant_values=255)
-        #making the colour pencil sketch
-        a7 = sharpen_img(new_im, kernel)
-        # create windows
+        a7 = sharpen_img(im_rgb, kernel)
         win0 = 'Original'
         win1 = 'Processed'
 
-        r,c = new_im.shape[0:2]
+        r,c = im_rgb.shape[0:2]
         resize_factor = 1
 
         R = int(r//resize_factor)
@@ -62,7 +51,7 @@ while True:
         cv.resizeWindow(win0, (win_size[0]//2,win_size[1]//2))
         cv.resizeWindow(win1, win_size)
 
-        cv.imshow(win0, new_im)
+        cv.imshow(win0, im_rgb)
         cv.imshow(win1, a7)
 	
         # align windows        
