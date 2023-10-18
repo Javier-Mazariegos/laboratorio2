@@ -1,6 +1,18 @@
 import cv2 as cv
 #colour pencil sketch effect
 def pencil_sketch_col(img):
+    """
+    Aplica un efecto de  Pencil Sketch Effect:Colour a una imagen.
+
+    Esta función toma una imagen de entrada y utiliza la función `cv.pencilSketch` de OpenCV
+    para crear un efecto de Pencil Sketch Effect:Colour. 
+
+    Parameters:
+    img (numpy.ndarray): Una matriz numpy que representa la imagen de entrada.
+
+    Returns:
+        numpy.ndarray: Una nueva matriz numpy que representa la imagen con el efecto  Pencil Sketch Effect:Colour.
+    """
     #inbuilt function to create sketch effect in colour and greyscale
     sk_gray, sk_color = cv.pencilSketch(img, sigma_s=60, sigma_r=0.07, shade_factor=0.1) 
     return  sk_color

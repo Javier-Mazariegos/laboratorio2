@@ -2,6 +2,19 @@ import cv2 as cv
 import numpy as np
 #colour pencil sketch effect
 def sharpen_img(imagen, kernel):
+    """
+    Aplica un filtro de Sharp Effect a una imagen utilizando un kernel de convolución.
+
+    Esta función toma una imagen de entrada y un kernel de convolución y aplica un filtro deSharp Effect
+    a la imagen. El filtro se aplica a cada canal de color por separado.
+
+    Parameters:
+    imagen (numpy.ndarray): Una matriz numpy que representa la imagen de entrada.
+    kernel (numpy.ndarray): Una matriz numpy que representa el kernel de convolución para el filtro de mejora de nitidez.
+
+    Returns:
+        numpy.ndarray: Una nueva matriz numpy que representa la imagen con el filtro de mejora de nitidez aplicado.
+    """
     alto, ancho, _ = imagen.shape
     tam_kernel = kernel.shape[0]
 

@@ -3,7 +3,11 @@ import numpy as np
 from external import sharpen_img_cython
 
 """
-Speedup = 5.2/0.59-5.2 = -1.13
+Calculamos el speedup de la tarea 3 con respecto a la tarea 2 usando el video de prueba video_speed.mp4
+
+Speedup = 𝑡 𝑠ℎ𝑎𝑟p / t 𝑓𝑎𝑠𝑡−𝑠ℎ𝑎𝑟p
+
+Speedup = 195.77 / 25.38 = 7.71
 
 """
 
