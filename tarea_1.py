@@ -1,3 +1,8 @@
+# Tarea 1 - Laboratorio 2
+# Javier Mazariegos
+# Lorena Perez
+
+
 import cv2 as cv
 #colour pencil sketch effect
 def pencil_sketch_col(img):

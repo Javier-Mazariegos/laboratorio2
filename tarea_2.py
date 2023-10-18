@@ -1,3 +1,7 @@
+# Tarea 1 - Laboratorio 2
+# Javier Mazariegos
+# Lorena Perez
+
 import cv2 as cv
 import numpy as np
 #colour pencil sketch effect
