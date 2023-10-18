@@ -1,4 +1,4 @@
-# Tarea 1 - Laboratorio 2
+# Tarea 3 - Laboratorio 2
 # Javier Mazariegos
 # Lorena Perez
 
